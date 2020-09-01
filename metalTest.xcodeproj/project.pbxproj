@@ -11,6 +11,10 @@
 		5924A3E524FEC8C200283E58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924A3E424FEC8C200283E58 /* ContentView.swift */; };
 		5924A3E724FEC8C400283E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5924A3E624FEC8C400283E58 /* Assets.xcassets */; };
 		5924A3EA24FEC8C400283E58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5924A3E924FEC8C400283E58 /* Preview Assets.xcassets */; };
+		5924A3F324FEC8D300283E58 /* MetalNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924A3F224FEC8D300283E58 /* MetalNSView.swift */; };
+		5924A3F524FEC8FF00283E58 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5924A3F424FEC8FF00283E58 /* Shaders.metal */; };
+		5924A3F724FEC91F00283E58 /* SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924A3F624FEC91F00283E58 /* SetUp.swift */; };
+		5924A3FF24FECA9700283E58 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924A3FE24FECA9700283E58 /* MetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		5924A3E924FEC8C400283E58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5924A3EB24FEC8C400283E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5924A3EC24FEC8C400283E58 /* metalTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = metalTest.entitlements; sourceTree = "<group>"; };
+		5924A3F224FEC8D300283E58 /* MetalNSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalNSView.swift; sourceTree = "<group>"; };
+		5924A3F424FEC8FF00283E58 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		5924A3F624FEC91F00283E58 /* SetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUp.swift; sourceTree = "<group>"; };
+		5924A3FE24FECA9700283E58 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 			children = (
 				5924A3E224FEC8C200283E58 /* metalTestApp.swift */,
 				5924A3E424FEC8C200283E58 /* ContentView.swift */,
+				5924A3FE24FECA9700283E58 /* MetalView.swift */,
+				5924A3F224FEC8D300283E58 /* MetalNSView.swift */,
+				5924A3F624FEC91F00283E58 /* SetUp.swift */,
+				5924A3F424FEC8FF00283E58 /* Shaders.metal */,
 				5924A3E624FEC8C400283E58 /* Assets.xcassets */,
 				5924A3EB24FEC8C400283E58 /* Info.plist */,
 				5924A3EC24FEC8C400283E58 /* metalTest.entitlements */,
@@ -102,6 +114,7 @@
 				TargetAttributes = {
 					5924A3DE24FEC8C200283E58 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -140,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5924A3FF24FECA9700283E58 /* MetalView.swift in Sources */,
+				5924A3F524FEC8FF00283E58 /* Shaders.metal in Sources */,
 				5924A3E524FEC8C200283E58 /* ContentView.swift in Sources */,
+				5924A3F724FEC91F00283E58 /* SetUp.swift in Sources */,
 				5924A3E324FEC8C200283E58 /* metalTestApp.swift in Sources */,
+				5924A3F324FEC8D300283E58 /* MetalNSView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = metalTest/metalTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -283,6 +301,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cracksoftware.metalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = metalTest/metalTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
